@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('username')->unique();
-            $table->integer('karma_score')->unsigned()->default(0);
+            $table->integer('karma_score')->unsigned()->default(0)->index();
             $table->foreignId('image_id')->constrained()->onDelete('cascade');
         });
     }

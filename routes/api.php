@@ -15,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('v1/')->group(function () {
     Route::get('user/{id}/karma-position/{numUsers?}', [UserController::class, 'getOverall'])
         ->where('numUsers', '[0-9]+');
-
-    Route::get('users', [UserController::class, 'get']);
 });
