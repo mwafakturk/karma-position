@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b687ee468c146df3e1e526f7371201d4",
+    "content-hash": "39d50fafa76f5ef3707e6735bc8f01c3",
     "packages": [
         {
             "name": "brick/math",
@@ -5089,6 +5089,55 @@
                 }
             ],
             "time": "2022-03-08T17:03:00+00:00"
+        },
+        {
+            "name": "vpominchuk/laravel-mysql-use-index-scope",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vpominchuk/laravel-mysql-use-index-scope.git",
+                "reference": "5b7490ba2f0822980d5e02281e7340a1cc0130e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vpominchuk/laravel-mysql-use-index-scope/zipball/5b7490ba2f0822980d5e02281e7340a1cc0130e4",
+                "reference": "5b7490ba2f0822980d5e02281e7340a1cc0130e4",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+                "php": "^7.4 | ^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "VPominchuk\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vasyl Pominchuk",
+                    "email": "vpominchuk@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A super simple package allowing for use MySQL `USE INDEX` and `FORCE INDEX` statements",
+            "homepage": "https://github.com/vpominchuk/laravel-mysql-use-index-scope",
+            "keywords": [
+                "laravel",
+                "laravel mysql",
+                "laravel mysql force index",
+                "laravel mysql use index"
+            ],
+            "support": {
+                "issues": "https://github.com/vpominchuk/laravel-mysql-use-index-scope/issues",
+                "source": "https://github.com/vpominchuk/laravel-mysql-use-index-scope/tree/v1.0.2"
+            },
+            "time": "2022-02-21T11:44:07+00:00"
         },
         {
             "name": "webmozart/assert",
