@@ -30,6 +30,10 @@ class UserController extends Controller
         $minKarma      = User::select('karma_score')->min('karma_score');
         $selectedUser  = User::with('image')->find($id);
 
+        if (!$numUsers || $numUsers > $userCount || $numUsers > 10000) {
+            $numUsers = 5;
+        }
+
         if ($selectedUser->karma_score == $maxKarma) {
             $all_users = User::selectRaw('id, username , karma_score , image_id')
                 ->orderBy('karma_score', 'DESC')
