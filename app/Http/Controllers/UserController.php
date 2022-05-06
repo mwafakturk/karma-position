@@ -9,6 +9,9 @@ class UserController extends Controller
 {
     public function getOverall($id, $numUsers = null)
     {
+
+        $selectedUser  = User::with('image')->findOrFail($id);
+
         DB::statement("SET @rank := 0");
         $userReversePosition = DB::select('SELECT *
         FROM (
@@ -28,7 +31,7 @@ class UserController extends Controller
         $userCount     = User::count();
         $maxKarma      = User::select('karma_score')->max('karma_score');
         $minKarma      = User::select('karma_score')->min('karma_score');
-        $selectedUser  = User::with('image')->find($id);
+
 
         if (!$numUsers || $numUsers > $userCount || $numUsers > 10000) {
             $numUsers = 5;
